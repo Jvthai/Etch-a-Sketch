@@ -1,4 +1,4 @@
-//make default grid
+//establish DOM element container for the grid
 const container = document.querySelector('#container');
 
 function createGrid(rows, cols){
