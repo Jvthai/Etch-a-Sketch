@@ -1,10 +1,12 @@
 //establish DOM element container for the grid
 const container = document.querySelector('#container');
 
+//ability to empty out the grid by calling function
 function empty(element){
     element.innerHTML = ""; 
 }
 
+//reset grid button functionality
 const resetBtn = document.querySelector('#resetBtn'); 
 resetBtn.addEventListener("click", function(){
     //remove the contents of the container somehow and then call createGrid function to recreate a new grid
@@ -12,14 +14,21 @@ resetBtn.addEventListener("click", function(){
     createGrid(16,16);
 }); 
 
-//cutom grid button
+//create cutom grid button
 const customGrid = document.querySelector('#customGrid')
 customGrid.addEventListener("click", function(){
     let num = prompt("Please enter a number for the grid");
         empty(container);
-        createGrid(num, num);  
+        if (num <= 64){
+            createGrid(num, num);
+        }
+        else{
+            alert("Please try again and input a number below 65")
+        }
+        
 });
 
+// create the base grtid and any future grid by passing number values
 function createGrid(rows, cols){
    for (let i = 0; i < (rows * cols); i++){
     //establishes the base grid

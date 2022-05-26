@@ -25,7 +25,14 @@ body{
 button {
     height: 5%; 
     width: 10%; 
-    
+}
+
+#customGrid{
+    margin-bottom: 3%;
+}
+
+#resetBtn{
+    margin-top: 3%; 
 }
 
 .grid-item {
