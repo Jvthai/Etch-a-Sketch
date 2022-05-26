@@ -3,12 +3,29 @@
     --grid-rows: 1; 
 }
 
+body{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    
+}
+
+
+
 #container {
-    display: grid; 
+    display: grid;
+    align-content: center; 
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     height: 500px;
     width: 500px; 
+    border: 1px solid rgb(0, 0, 0); 
+}
+
+button {
+    height: 5%; 
+    width: 10%; 
+    
 }
 
 .grid-item {
